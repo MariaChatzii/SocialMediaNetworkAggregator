@@ -2,8 +2,6 @@
 Android App Development for easily making actions on Twitter, Facebook and Instagram at the same time.
 
 
-
-
 This app allow user to:
 
 ●   Log in to Twitter, Facebook and Instagram.
