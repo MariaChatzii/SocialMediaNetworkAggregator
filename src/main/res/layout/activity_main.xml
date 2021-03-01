@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <CheckBox
+        android:id="@+id/instaCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Instagram"
+        app:layout_constraintStart_toStartOf="@+id/facebookCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/facebookCheckBox" />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/fblogin_button"
+        android:layout_width="212dp"
+        android:layout_height="26dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/searchByHashtagButton"
+        app:layout_constraintStart_toStartOf="@+id/searchByHashtagButton"
+        app:layout_constraintTop_toBottomOf="@+id/searchByHashtagButton" />
+
+    <CheckBox
+        android:id="@+id/twitterCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Twitter"
+        app:layout_constraintEnd_toEndOf="@+id/createStatusOrStoryButton"
+        app:layout_constraintStart_toStartOf="@+id/createStatusOrStoryButton"
+        app:layout_constraintTop_toBottomOf="@+id/createStatusOrStoryButton" />
+
+    <CheckBox
+        android:id="@+id/facebookCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Facebook"
+        app:layout_constraintStart_toStartOf="@+id/twitterCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/twitterCheckBox" />
+
+    <Button
+        android:id="@+id/createStatusOrStoryButton"
+        android:layout_width="267dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="50dp"
+        android:text="Create Status/Story"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/searchByHashtagButton"
+        android:layout_width="242dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="76dp"
+        android:text="Search By Hashtag"
+        app:layout_constraintEnd_toEndOf="@+id/instaCheckBox"
+        app:layout_constraintStart_toStartOf="@+id/instaCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/instaCheckBox" />
+
+    <Button
+        android:id="@+id/twitterLoginBtn"
+        android:layout_width="239dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:drawableLeft="@drawable/tw__ic_logo_default"
+        android:drawablePadding="3dp"
+        android:gravity="fill_vertical"
+        android:text="Log in with Twitter"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/fblogin_button"
+        app:layout_constraintStart_toStartOf="@+id/fblogin_button"
+        app:layout_constraintTop_toBottomOf="@+id/fblogin_button"
+        app:layout_constraintVertical_bias="0.07" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

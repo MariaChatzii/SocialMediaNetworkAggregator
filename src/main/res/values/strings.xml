@@ -1,0 +1,8 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string name="app_name">SocialMediaNetworkAggregator</string>
+    <string name="facebook_app_id">420615309110932</string>
+
+    <string name="instagram_app_id">411658496649064</string>
+
+
+</resources>

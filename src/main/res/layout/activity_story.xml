@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StoryActivity">
+
+    <ImageView
+        android:id="@+id/storyImageView"
+        android:layout_width="299dp"
+        android:layout_height="299dp"
+        android:layout_marginTop="112dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <Button
+        android:id="@+id/publishStoryButton"
+        android:layout_width="96dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="100dp"
+        android:text="PUBLISH"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addStoryImageButton" />
+
+    <Button
+        android:id="@+id/addStoryImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="Add Image"
+        app:layout_constraintTop_toBottomOf="@+id/storyImageView"
+        tools:layout_editor_absoluteX="147dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

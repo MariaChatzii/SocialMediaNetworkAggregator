@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/likesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Likes:"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/listview_selected_item"
+                app:layout_constraintTop_toBottomOf="@+id/listview_selected_item" />
+
+            <include
+                android:id="@+id/listview_selected_item"
+                layout="@layout/statuses_list_record"
+                android:layout_width="408dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:isScrollContainer="true"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/likesCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/likesTextView"
+                app:layout_constraintTop_toTopOf="@+id/likesTextView" />
+
+            <TextView
+                android:id="@+id/sharesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Shares:"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/likesCount"
+                app:layout_constraintTop_toTopOf="@+id/likesCount" />
+
+            <TextView
+                android:id="@+id/sharesCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/sharesTextView"
+                app:layout_constraintTop_toTopOf="@+id/sharesTextView" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintEnd_toEndOf="@id/listview_selected_item"
+                app:layout_constraintStart_toStartOf="@id/listview_selected_item"
+                app:layout_constraintTop_toBottomOf="@+id/sharesTextView">
+
+                <ListView
+                    android:id="@+id/commentsListView"
+                    android:layout_width="400dp"
+                    android:layout_height="match_parent"
+                    android:nestedScrollingEnabled="true"/>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>
